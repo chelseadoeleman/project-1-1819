@@ -4,7 +4,8 @@
   "description": "Application with the Oba Api for Oba Junior",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "parcel client/public/index.html",
+    "build": "parcel build client/public/index.html"
   },
   "repository": {
     "type": "git",
@@ -15,6 +16,10 @@
   "license": "MIT",
   "homepage": "https://github.com/chelseadoeleman/project-1-1819#readme",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "oba-wrapper": "github:maanlamp/OBA-wrapper"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.11.0"
   }
 }
