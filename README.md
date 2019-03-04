@@ -1,9 +1,63 @@
 # Project 1 @cmda-minor-web · 2018-2019
 
-## Zoek in de de collectie van de OBA
+**Description of the application. Coming soon...**
 
-Het project vindt plaats bij de Centrale OBA. Maandagochtend is om 10.00 uur de kickoff, vrijdag zijn de presentaties van de resultaten. In een week bouwt iedere student een eigen prototype dat bezoekers kan helpen om items uit de OBA collectie te vinden. Technieken geleerd bij [CSS to the Rescue](https://github.com/cmda-minor-web/css-to-the-rescue-1819) en [Web App from Scratch](https://github.com/cmda-minor-web/web-app-from-scratch-1819) worden toegepast bij het bouwen van de de prototypes.
+## Table of Contents
+* [How to install](#how-to-install) 
+* [OBA API](#oba-api)
+* [Concept](#concept)
+* [Walktrough the application](#walk-trough-the-application) 
+* [Learning process](#learning-process)
+* [Resources](#resources)
+* [Credits](#credits)
+* [Checklist](#checklist)
+* [License](#license)
 
-We verzamelen maandagochtend om 09.45 op de 1e verdieping van de Centrale OBA, [Oosterdokskade 143](https://www.google.com/maps/place/OBA+library+of+Amsterdam/@52.3756983,4.9082087,15z/data=!4m2!3m1!1s0x0:0x6b97f693e6ecb494?ved=2ahUKEwioo6OrzubgAhWLNOwKHR6KDQgQ_BIwCnoECAYQCA).
+## How to install
 
+Before installing make sure you have installed the latest version of node.js.
+Choose or make a new directory.
+Load the template into your directory.
+
+```bash
+git clone https://github.com/chelseadoeleman/project-1-1819.git
+```
+
+Make sure you are in the right directory 
+```bash
+cd project-1-1819
+```
+
+Check if you have the latest version of npm.
+Install the dependencies in [package.json](./package.json)
+```bash
+npm install
+```
+
+## OBA API
+
+
+## Concept 
+
+For this concept I will solely focus on Oba Junior. To make searching books easier for them I want to create an application where they can visually choose what preferences they have for a book, or what they are looking for. This will then be connected to their personal data, where their history also can be found. This dataset however is not publicaly available yet so I will have to fake this data. 
+
+After this process the user will be able to scan a book and get a selections of books based on their previous reading history or based on some genre's they have read before to discover new books. Then the application will tell them where they can find this book, by showing a floor plan of the junior department and highlighting that specific book case. If they have a mobile phone they can scan the floorplan using a QR code, to view the floor plan on their mobile phone. 
+
+## Walktrough the application
+
+
+## Learning process
+
+
+## Resources
+
+
+## Credits
+
+
+## Checklist
+
+
+## License
+This repository is licensed as [MIT](LICENSE) by [Chelsea Doeleman](https://github.com/chelseadoeleman).
 
