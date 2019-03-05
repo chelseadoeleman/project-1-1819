@@ -1,1 +1,137 @@
+@font-face {
+    font-family: "Fredoka";
+    src: url("../assets/fonts/FredokaOne-Regular.ttf") format("opentype")
+}
 
+
+* {
+    margin: 0;
+    font-family: inherit;
+    line-height: inherit;
+    color: inherit;
+    box-sizing: inherit;
+}
+
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+img {
+    display: block;
+}
+
+button {
+    font-size: inherit;
+    cursor: pointer;
+}
+
+ol, ul {
+    padding: 0;
+    list-style: none;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}   
+
+html {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    line-height: 1.5em;
+    font-family: "Fredoka";
+    color: #f4f4f4;
+    background-image: url("../assets/images/purple.png");
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    background-color: hsl(303, 51%, 10%);
+    justify-content: space-around;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li {
+    text-decoration: none;
+    justify-content: space-between;
+    margin: 0 2em;
+}
+
+header nav ul li a {
+    text-decoration: none;
+}
+
+nav ul li form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+} 
+
+nav ul li form legend {
+    text-align: center;
+    margin: 0 2em;
+} 
+
+nav ul li form input{
+    border-style: none;
+    border-radius: .5em;
+    height: 2.5em;
+    width: 100%;
+} 
+
+
+header img {
+    margin: .5em 0;
+    width: 7%;
+    height: 7%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+ 
+h1 {
+    font-size: 6em;
+    margin: 1em auto;
+}
+
+section {
+    width: 70%;
+    display: flex;
+    overflow-x: scroll;
+}
+
+section article {
+    flex-direction: row;
+    margin: 2em;
+    padding: 2.5em 2em;
+    background-color: #82287D;
+    border-radius: .5em;
+    justify-content: space-between;
+}
