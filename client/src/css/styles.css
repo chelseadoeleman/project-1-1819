@@ -63,7 +63,6 @@ header {
     display: flex;
     position: sticky;
     top: 0;
-    background-color: #0B192F;
     justify-content: space-around;
     align-items: center;
 }
@@ -100,11 +99,13 @@ nav ul li form input{
     border-radius: .5em;
     height: 2.5em;
     width: 100%;
+    padding: 0 1em;
+    color:  #82287D
 } 
 
 
 header img {
-    margin: .5em 0;
+    margin: 1em 0;
     width: 7%;
     height: 7%;
 }
@@ -118,20 +119,24 @@ main {
  
 h1 {
     font-size: 6em;
-    margin: 1em auto;
+    margin: .75em auto;
 }
 
-section {
+.book-wrapper {
     width: 70%;
     display: flex;
     overflow-x: scroll;
 }
 
-section article {
+.book-wrapper article {
     flex-direction: row;
     margin: 2em;
-    padding: 2.5em 2em;
-    background-color: #82287D;
-    border-radius: .5em;
     justify-content: space-between;
+}
+
+.book-wrapper article img{
+    width: 225px;
+    background-color: #82287D;
+    box-shadow: -25px -25px 1px #82287D;
+    border-radius: .5em;
 }
