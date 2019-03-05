@@ -63,7 +63,7 @@ header {
     display: flex;
     position: sticky;
     top: 0;
-    background-color: hsl(303, 51%, 10%);
+    background-color: #0B192F;
     justify-content: space-around;
     align-items: center;
 }
