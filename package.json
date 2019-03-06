@@ -18,6 +18,7 @@
   "dependencies": {
     "babel-polyfill": "^6.26.0",
     "helpers": "0.0.6",
+    "navigo": "^7.1.2",
     "oba-wrapper": "github:maanlamp/OBA-wrapper"
   },
   "devDependencies": {

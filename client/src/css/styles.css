@@ -49,9 +49,9 @@ body {
     line-height: 1.5em;
     font-family: "Fredoka";
     color: #f4f4f4;
-    background-image: url("../assets/images/purple.png");
+    background-image: url("../assets/images/blue.jpg");
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     background-repeat: no-repeat;
     background-position: center center;
     -webkit-font-smoothing: antialiased;
@@ -62,6 +62,9 @@ body {
 header {
     display: flex;
     position: sticky;
+    background-image: linear-gradient(rgb(0, 9, 22), rgba(0, 9, 22, .2) 80%);
+    /* background-color: #0B192F; */
+    /* background-color: #f2f2f2; */
     top: 0;
     justify-content: space-around;
     align-items: center;
@@ -118,6 +121,9 @@ main {
 }
  
 h1 {
+    width: 70%;
+    line-height: 1.2em;
+    text-align: center;
     font-size: 6em;
     margin: .75em auto;
 }
@@ -139,4 +145,79 @@ h1 {
     background-color: #82287D;
     box-shadow: -25px -25px 1px #82287D;
     border-radius: .5em;
+}
+
+.genre-wrapper {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: scroll;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.genre-wrapper article {
+    display: flex;
+    flex-direction: row;
+    margin: 2em;
+    justify-content: center;
+    align-items: center;
+}
+
+.genre-wrapper article img{
+    max-width: 300px;
+    background-color: #00A2DC;
+    box-shadow: -25px -25px 1px #00A2DC;
+    border-radius: .5em;
+}
+
+.format-wrapper {
+    width: 70%;
+    display: flex;
+    overflow-x: scroll;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.format-wrapper article {
+    display: flex;
+    width: 60%;
+    background-color: #DA1F22;
+    height: 7em;
+    margin: 1.5em;
+    border-radius: .5em;
+    justify-content: center;
+    align-items: center;
+}
+
+.format-wrapper article h2{
+    font-size: 2em;
+    text-shadow: 3px 2px 12px rgba(0, 0, 0, .2);
+}
+
+.reading-level-wrapper {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: scroll;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.reading-level-wrapper article {
+    display: flex;
+    width: 30%;
+    background-color: #009A45;
+    height: 10em;
+    margin: 2em;
+    border-radius: .5em;
+    justify-content: center;
+    align-items: center;
+}
+
+.reading-level-wrapper article h2{
+    font-size: 2em;
+    text-shadow: 3px 2px 12px rgba(0, 0, 0, .2);
 }
