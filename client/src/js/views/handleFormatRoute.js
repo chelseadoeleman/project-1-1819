@@ -1,9 +1,13 @@
-export const handleFormatRoute = (main) => {
+export const handleFormatRoute = (main, router) => {
     return async () => {
         main.innerHTML = ''
 
         const headingElement = document.createElement('h1')
         const sectionElement = document.createElement('section')
+        const logo = document.querySelector('.logo')
+        logo.addEventListener('click', () => {
+            router.navigate('/')
+        })
         
         sectionElement.classList.add('format-wrapper')
         headingElement.innerText = 'Wat zoek je?'
@@ -14,6 +18,10 @@ export const handleFormatRoute = (main) => {
             const article = document.createElement('article')
             
             formatItems.innerText = format
+
+            article.addEventListener('click', () => {
+            router.navigate('/readinglevel')
+            })
 
             article.appendChild(formatItems)
             sectionElement.appendChild(article)

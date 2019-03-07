@@ -1,4 +1,5 @@
 import { getData } from '../utils/getData'
+import { getAverageRGB } from '../utils/getColor';
 
 export const handleIndexRoute = (main) => {
     return async () => {
@@ -25,7 +26,6 @@ export const handleIndexRoute = (main) => {
                     return
                 } else {
                     img.setAttribute('src', image)
-                    
                     article.appendChild(img)
                     sectionElement.appendChild(article)
                 }

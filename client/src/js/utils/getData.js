@@ -7,7 +7,7 @@ export async function getData() {
             key: '1e19898c87464e239192c8bfe422f280'
         })
         
-        const stream = await api.createStream('search/targetAudience=ageYouth&facet=type(book)&facet=language(dut)&facet=genre(sprookjes){5}')
+        const stream = await api.createStream('search/doelgroep=ageYouth&facet=type(book)&facet=language(dut)&facet=genre(sprookjes)&p=jeugd{5}')
         const data = await stream
             .pipe(getTransformedResultFromResults)
             .all()

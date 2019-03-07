@@ -2,7 +2,8 @@ import Navigo from 'navigo'
 import { handleGenreRoute } from './views/handleGenreRoute'
 import { handleErrorRoute } from './views/handleErrorRoute'
 import { handleIndexRoute } from './views/handleIndexRoute'
-import { handleFormatRoute } from './views/handleFormatRoute';
+import { handleFormatRoute } from './views/handleFormatRoute'
+import { handleReadingLevelRoute } from './views/handleReadingLevelRoute';
 
 const root = null
 const useHash = true
@@ -16,8 +17,8 @@ export const Router = () => {
         router
             .on({
                 '/genre': handleGenreRoute(main, router),
-                // '/readinglevel': handleReadingLevelRoute(main, router),
-                '/format': handleFormatRoute(main),
+                '/readinglevel': handleReadingLevelRoute(main, router),
+                '/format': handleFormatRoute(main, router),
                 '/error': handleErrorRoute(main, router),
                 '/': handleIndexRoute(main)
             })

@@ -3,6 +3,10 @@
     src: url("../assets/fonts/FredokaOne-Regular.ttf") format("opentype")
 }
 
+:root {
+    --colors: rgb(0, 162, 220);
+}
+
 
 * {
     margin: 0;
@@ -57,6 +61,10 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.logo {
+    cursor: pointer;
 }
 
 header {
@@ -128,6 +136,10 @@ h1 {
     margin: .75em auto;
 }
 
+article {
+    cursor: pointer;
+}
+
 .book-wrapper {
     width: 70%;
     display: flex;
@@ -142,8 +154,8 @@ h1 {
 
 .book-wrapper article img{
     width: 225px;
-    background-color: #82287D;
-    box-shadow: -25px -25px 1px #82287D;
+    background-color: var(--colors);
+    box-shadow: -25px -25px 1px var(--colors);
     border-radius: .5em;
 }
 

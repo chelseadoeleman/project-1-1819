@@ -1,25 +1,36 @@
 
+
 export const handleReadingLevelRoute = (main, router) => {
     return async () => {
         main.innerHTML = ''
 
         const headingElement = document.createElement('h1')
-        const sectionElement = document.querySelector('section')
-        const errorMessage = document.createElement('p')
-        const backToHome = document.createElement('a')
-        
-        sectionElement.classList.add('genre-wrapper')
-        headingElement.innerText = 'OOPS!'
-        errorMessage.innerText = 'This page does not seem to exist... But we know a page that does exist:'
-        backToHome.innerText = `Let's go back to an existing page!`
-        backToHome.classList.add('button')
-        backToHome.addEventListener('click', () => {
+        const sectionElement = document.createElement('section')
+        const logo = document.querySelector('.logo')
+        logo.addEventListener('click', () => {
             router.navigate('/')
         })
 
+        
+        sectionElement.classList.add('reading-level-wrapper')
+        headingElement.innerText = 'Kies je AVI niveau'
+        const avi = ['Start','M3-E4','M5-E6','M7-E7','Plus','Sla over']
+        
+        avi.forEach(level => {
+            const article = document.createElement('article')
+            const aviLevel = document.createElement('h2')
+            
+            aviLevel.innerText = level
+
+            article.addEventListener('click', () => {
+            router.navigate('/')
+            })
+
+            article.appendChild(aviLevel)
+            sectionElement.appendChild(article)
+        })
+        
         main.appendChild(headingElement)
         main.appendChild(sectionElement)
-        main.appendChild(errorMessage)
-        main.appendChild(backToHome)
     }
 }
