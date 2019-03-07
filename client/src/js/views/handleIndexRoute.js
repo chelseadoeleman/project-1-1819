@@ -29,7 +29,7 @@ export const handleIndexRoute = (main) => {
                 const img = document.createElement('img')
                 
                 sectionElement.classList.add('book-wrapper')
-                headingElement.innerText = 'Ontdekken'
+                headingElement.innerText = 'Bekijk onze boeken'
 
                 if (image === undefined) {
                     return
