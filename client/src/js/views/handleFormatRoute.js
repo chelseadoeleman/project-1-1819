@@ -1,7 +1,10 @@
+import { Loader } from '../utils/Loader'
+
 export const handleFormatRoute = (main, router) => {
     return async () => {
         main.innerHTML = ''
 
+        Loader.toggleLoader()
         const headingElement = document.createElement('h1')
         const sectionElement = document.createElement('section')
         const logo = document.querySelector('.logo')
@@ -29,5 +32,7 @@ export const handleFormatRoute = (main, router) => {
         
         main.appendChild(headingElement)
         main.appendChild(sectionElement)
+
+        Loader.toggleLoader()
     }
 }

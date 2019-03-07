@@ -55,7 +55,7 @@ body {
     color: #f4f4f4;
     background-image: url("../assets/images/blue.jpg");
     background-size: cover;
-    height: 100%;
+    min-height: 100vh;
     background-repeat: no-repeat;
     background-position: center center;
     -webkit-font-smoothing: antialiased;
@@ -63,19 +63,31 @@ body {
     -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
+footer {
+    margin: 10em;
+}
+
 .logo {
     cursor: pointer;
+    transition: all .2s ease-in-out;
+    transform: scale(0.9);
+}
+
+.logo:hover {
+    transform: scale(1);
+    filter: saturate(1.2);
 }
 
 header {
     display: flex;
     position: sticky;
-    background-image: linear-gradient(rgb(0, 9, 22), rgba(0, 9, 22, .2) 80%);
+    background-image: linear-gradient(rgb(0, 9, 22), rgba(0, 9, 22, .2) 90%);
     /* background-color: #0B192F; */
     /* background-color: #f2f2f2; */
     top: 0;
     justify-content: space-around;
     align-items: center;
+    z-index: 99;
 }
 
 header nav ul {
@@ -136,9 +148,6 @@ h1 {
     margin: .75em auto;
 }
 
-article {
-    cursor: pointer;
-}
 
 .book-wrapper {
     width: 70%;
@@ -174,13 +183,22 @@ article {
     margin: 2em;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .genre-wrapper article img{
     max-width: 300px;
     background-color: #00A2DC;
-    box-shadow: -25px -25px 1px #00A2DC;
+    box-shadow: -15px -15px 1px #00A2DC;
     border-radius: .5em;
+    transition: all .2s ease-in-out;
+    transform: scale(0.9);
+}
+
+.genre-wrapper article img:hover {
+    transform: scale(1);
+    box-shadow: -20px -20px 1px #DA007D;
+    filter: saturate(2);
 }
 
 .format-wrapper {
@@ -202,6 +220,14 @@ article {
     border-radius: .5em;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    transform: scale(0.9);
+}
+
+.format-wrapper article:hover {
+    transform: scale(1);
+    box-shadow: -10px -10px 1px #00A2DC;
 }
 
 .format-wrapper article h2{
@@ -227,9 +253,91 @@ article {
     border-radius: .5em;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    transform: scale(0.9);
+}
+
+.reading-level-wrapper article:hover {
+    transform: scale(1);
+    box-shadow: -10px -10px 1px #DA007D;
 }
 
 .reading-level-wrapper article h2{
     font-size: 2em;
     text-shadow: 3px 2px 12px rgba(0, 0, 0, .2);
+}
+
+/* https://projects.lukehaas.me/css-loaders/ */
+
+.loader {
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    color: var(--colors);
+    font-size: 20px;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    text-indent: -9999em;
+    -webkit-animation: load4 1.3s infinite linear;
+    animation: load4 1.3s infinite linear;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+}
+@-webkit-keyframes load4 {
+    0%,
+    100% {
+        box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+    }
+    12.5% {
+        box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    25% {
+        box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    37.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    50% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    62.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+    75% {
+        box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+    87.5% {
+        box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
+}
+@keyframes load4 {
+    0%,
+    100% {
+        box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+    }
+    12.5% {
+        box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    25% {
+        box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0, 0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+    }
+    37.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em, 0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    50% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em, 0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+    }
+    62.5% {
+        box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+    }
+    75% {
+        box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em, -2em -2em 0 0;
+    }
+    87.5% {
+        box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
+    }
 }

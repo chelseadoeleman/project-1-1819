@@ -1,16 +1,20 @@
 import { getData } from '../utils/getData'
-import { getAverageRGB } from '../utils/getColor';
+// import { getAverageRGB } from '../utils/getColor';
+import { Loader } from '../utils/Loader'
 
 export const handleIndexRoute = (main) => {
     return async () => {
         main.innerHTML = ''
 
+        Loader.toggleLoader()
         const headingElement = document.createElement('h1')
         const sectionElement = document.createElement('section')
 
-        const results = await getData()
+        const data = await getData()
+        const results = data.flat()
 
-        results[0]
+        if (results) {
+            results
             .filter(result => {
                 return result.image && result.image.includes('https://v19.')
             })
@@ -30,6 +34,11 @@ export const handleIndexRoute = (main) => {
                     sectionElement.appendChild(article)
                 }
             })
+
+        } else {
+            console.log('no results')
+        }
+        
 
         main.appendChild(headingElement)
         main.appendChild(sectionElement)
