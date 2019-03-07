@@ -9,9 +9,18 @@ export async function getData() {
             key: '1e19898c87464e239192c8bfe422f280'
         })
         
-        const queryUrl = queryState.join('&')
-        const stream = await api.createStream(`search/doelgroep=ageYouth&facet=type(book)&facet=language(dut)${!!queryUrl ? '&' : ''}${queryUrl || ''}{50}`)
-        // const stream = await api.createStream('search/doelgroep=ageYouth&facet=type(book)&facet=language(dut)&facet=genre(sprookjes)&p=jeugd{5}')
+        const queryUrl = queryState
+            .filter(queryPart => !!queryPart)
+            .join('&')
+        const urlBase = `search`
+        const baseQuery = `doelgroep:ageYouth&facet=language(dut)`
+        const bookQuery = !queryUrl.includes('type') ? '&facet=type(book)' : ''
+        const dynamicQuery = `${queryUrl ? '&' : ''}${queryUrl || ''}`
+        const amount = '{50}'
+        const url = `${urlBase}/${baseQuery}${bookQuery}${dynamicQuery}${amount}`
+        console.log(url)
+        const stream = await api.createStream(url)
+
         const data = await stream
             .pipe(getTransformedResultFromResults)
             .all()

@@ -4,6 +4,7 @@ import { handleErrorRoute } from './views/handleErrorRoute'
 import { handleIndexRoute } from './views/handleIndexRoute'
 import { handleFormatRoute } from './views/handleFormatRoute'
 import { handleReadingLevelRoute } from './views/handleReadingLevelRoute';
+import { handleResultsRoute } from './views/handleResultsRoute';
 
 const root = null
 const useHash = true
@@ -19,6 +20,7 @@ export const Router = () => {
                 '/genre': handleGenreRoute(main, router),
                 '/readinglevel': handleReadingLevelRoute(main, router),
                 '/format': handleFormatRoute(main, router),
+                '/results': handleResultsRoute(main, router),
                 '/error': handleErrorRoute(main, router),
                 '/': handleIndexRoute(main)
             })

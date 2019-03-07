@@ -4,7 +4,7 @@
   "description": "Application with the Oba Api for Oba Junior",
   "main": "script.js",
   "scripts": {
-    "start": "parcel client/public/index.html --no-source-maps",
+    "start": "parcel client/public/index.html --no-source-maps -p 3000",
     "build": "parcel build client/public/index.html"
   },
   "repository": {

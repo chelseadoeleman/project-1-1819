@@ -1,16 +1,17 @@
 import { getData } from '../utils/getData'
 import { Loader } from '../utils/Loader'
-import { queryState } from '../utils/getQueryState';
 
-export const handleIndexRoute = (main) => {
+export const handleResultsRoute = (main, router) => {
     return async () => {
         main.innerHTML = ''
-
-        queryState.length = 0
 
         Loader.toggleLoader()
         const headingElement = document.createElement('h1')
         const sectionElement = document.createElement('section')
+        const logo = document.querySelector('.logo')
+        logo.addEventListener('click', () => {
+            router.navigate('/')
+        })
 
         const data = await getData()
         const results = data.flat()
