@@ -9,8 +9,11 @@ export const handleIndexRoute = (main) => {
         queryState.length = 0
 
         Loader.toggleLoader()
+        const root = document.documentElement
         const headingElement = document.createElement('h1')
         const sectionElement = document.createElement('section')
+
+        root.style.setProperty('--colors', '')
 
         const data = await getData()
         const results = data.flat()
