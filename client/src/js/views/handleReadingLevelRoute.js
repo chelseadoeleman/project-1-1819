@@ -20,18 +20,16 @@ export const handleReadingLevelRoute = (main, router) => {
             const article = document.createElement('article')
             const aviLevel = document.createElement('h2')
 
-            if (level === 'Sla over') {
-                console.log('keep this!')
-            } else {
+            if (level !== 'Sla over') {
                 article.classList.add('disabled')
             }
             
             aviLevel.innerText = level
 
             article.addEventListener('click', () => {
-            if (level === 'Sla over' ) {
-                router.navigate('/results')
-            }
+                if (level === 'Sla over' ) {
+                    router.navigate('/results')
+                }
             })
 
             article.appendChild(aviLevel)

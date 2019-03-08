@@ -57,8 +57,15 @@ const getSummaryFromResult = (result) => {
         || undefined
 }
 
+const getDetailPageFromResult = (result) => {
+    return result['detail-page']
+        && result['detail-page']._text
+        || undefined
+}
+
 
 export const getTransformedResultFromResults = (results) => {
+    console.log(results)
     return results
         ? results.map(result => ({
             author: getAuthorFromResult(result),
@@ -68,7 +75,8 @@ export const getTransformedResultFromResults = (results) => {
             format: getFormatFromResult(result),
             subject: getSubjectFromResult(result),
             targetAudience: getTargetAudienceFromResult(result),
-            summary: getSummaryFromResult(result)
+            summary: getSummaryFromResult(result),
+            detailpage: getDetailPageFromResult(result)
         })) 
         : []
 }

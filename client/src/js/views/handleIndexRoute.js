@@ -23,9 +23,10 @@ export const handleIndexRoute = (main) => {
             return result.image && result.image.includes('https://v19.')
         })
         .forEach(result => {
-            const { image } = result
+            const { image, detailpage } = result
             const article = document.createElement('article')
             const img = document.createElement('img')
+            const link = document.createElement('a')
             
             sectionElement.classList.add('book-wrapper')
             headingElement.innerText = 'Bekijk onze boeken'
@@ -33,7 +34,10 @@ export const handleIndexRoute = (main) => {
                 return
             } else {
                 img.setAttribute('src', image)
-                article.appendChild(img)
+                link.setAttribute('href', detailpage)
+
+                link.appendChild(img)
+                article.appendChild(link)
                 sectionElement.appendChild(article)
             }
         })        
