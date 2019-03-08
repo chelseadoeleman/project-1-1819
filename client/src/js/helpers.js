@@ -1,9 +1,9 @@
 
 const getAuthorFromResult = (result) => {
     return result.authors
-        && result.authors["main-author"]
-        && result.authors["main-author"]._attributes
-        && result.authors["main-author"]._attributes["search-term"]
+        && result.authors['main-author']
+        && result.authors['main-author']._attributes
+        && result.authors['main-author']._attributes['search-term']
         || undefined
 }
 
@@ -17,15 +17,15 @@ const getImageFromResult = (result) => {
 
 const getSeriesFromResult = (result) => {
     return result.series
-        && result.series["series-title"]
-        && result.series["series-title"]._text
+        && result.series['series-title']
+        && result.series['series-title']._text
         || undefined
 }
 
 const getTitleFromResult = (result) => {
     return result.titles
-        && result.titles["short-title"]
-        && result.titles["short-title"]._text
+        && result.titles['short-title']
+        && result.titles['short-title']._text
         || undefined
 }
 
@@ -38,15 +38,15 @@ const getFormatFromResult = (result) => {
 
 const getSubjectFromResult = (result) => {
     return result.subjects
-        && result.subjects["topical-subject"]
-        && result.subjects["topical-subject"]._text
+        && result.subjects['topical-subject']
+        && result.subjects['topical-subject']._text
         || undefined
 }
 
 const getTargetAudienceFromResult = (result) => {
-    return result["target-audiences"]
-        && result["target-audiences"]["target-audience"]
-        && result["target-audiences"]["target-audience"]._text
+    return result['target-audiences']
+        && result['target-audiences']['target-audience']
+        && result['target-audiences']['target-audience']._text
         || undefined
 }
 

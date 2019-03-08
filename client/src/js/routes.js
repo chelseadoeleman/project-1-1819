@@ -3,8 +3,8 @@ import { handleGenreRoute } from './views/handleGenreRoute'
 import { handleErrorRoute } from './views/handleErrorRoute'
 import { handleIndexRoute } from './views/handleIndexRoute'
 import { handleFormatRoute } from './views/handleFormatRoute'
-import { handleReadingLevelRoute } from './views/handleReadingLevelRoute';
-import { handleResultsRoute } from './views/handleResultsRoute';
+import { handleReadingLevelRoute } from './views/handleReadingLevelRoute'
+import { handleResultsRoute } from './views/handleResultsRoute'
 
 const root = null
 const useHash = true

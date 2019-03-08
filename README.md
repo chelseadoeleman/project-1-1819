@@ -1,6 +1,8 @@
 # Project 1 @cmda-minor-web · 2018-2019
 
-**For this project I worked on a concept for the Oba Junior, a department of the Oba. While creating this concept I had to use the Oba API and show the knowledge that I aquired during Web-App-From-Scratch and CSS-To-The-Rescue**
+**For this project I worked on a concept for the Oba Junior, a department of the Oba. While creating this concept I had to use the Oba API and apply the knowledge that I aquired during Web-App-From-Scratch and CSS-To-The-Rescue**
+
+**!NOTE that the application is in Dutch, because the Oba is a Dutch website**
 
 ![The Application](./docs/discover.png)
 
@@ -53,18 +55,30 @@ These questions are based on the following facets that can be given to the searc
 
 The target group can also pick their favorite color from a colorpicker which will include all those shades that are associated with that color. From there on the different colors they chose from genre as from the colorpicker will be compared to the covers of the books. 
 
+![Colorpicker](./docs/colorpicker.png)
+
 The end result will be books that they like and hopefully some covers that speak to them on a personal level. 
 Sadly I wasn't able to build this all within one week, but this will be the final concept.
 
 ## Walktrough the application
 
+This is the first page you will come across, which is basically showing you an overview of the different books that are available in the Oba youth department. When clicking on 'Ontdekken' the user will be asked a series of questions. 
+
 ![index](./docs/index.png)
+
+First they have to choose their genre based on what image speaks to them the most. Behind every image there is a different query.
 
 ![genre](./docs/genre.png)
 
+After this they can choose the format they would like. It could be a readingbook, audiobook or an movie. Somehow with the Oba wrapper I wasn't able to get movies, so I disabled that button for now.
+
 ![format](./docs/format.png)
 
+Kids mostly read books of a certain level that applies to them. So in this section they get to choose their own reading level if they would like to. Right know this feature doesn't work yet so the buttons are disabled.
+
 ![readinglevel](./docs/readinglevel.png)
+
+Then they will get an overview of a page, with books that will probably most apply to them. 
 
 ![discover](./docs/discover.png)
 
@@ -83,20 +97,29 @@ On thursday I configured different search query's depending on an image of the u
 ## Resources
 
 #### Packages
-*   [Parcel]()
-*   [Babel-polyfill]()
-*   [Oba-wrapper]()
-*   [Navigo]()
+*   [Parcel](https://parceljs.org/)
+*   [Babel-polyfill](https://babeljs.io/docs/en/babel-polyfill)
+*   [Oba-wrapper](https://github.com/maanlamp/OBA-wrapper#codepromisestreamcatch-function-handler---promisestreamcode)
+*   [Navigo](https://github.com/krasimir/navigo)
 
 #### Sources
 *   [getAverageRGB color](https://stackoverflow.com/questions/2541481/get-average-color-of-image-via-javascript)
+*   [Readme van Daniel](https://github.com/DanielvandeVelde/functional-programming/blob/master/README.md)
 
 #### API
 *   [OBA API](https://zoeken.oba.nl/api/v1/#/search)
 
 #### Images
-*   [Rawpixel]()
-*   [Rawpixel]()
+*   [Background](https://www.rawpixel.com/image/393625/abstract-splashed-watercolor-textured-background)
+*   [Rocket](https://www.rawpixel.com/image/458341/launch-start-website)
+*   [Dieren](https://www.rawpixel.com/image/44671/wildlife-animal-cartoons)
+*   [Dragon](https://www.freepik.com/free-vector/dragon-knight-legend-illustration-flat_2874357.htm)
+*   [Wereld](https://www.freepik.com/free-vector/animal-world-map_3129717.htm)
+*   [Soccer](https://www.freepik.com/free-vector/soccer-stadium-illustration_3297808.htm)
+*   [Basketbal](https://www.freepik.com/free-vector/boys-playing-basketball-illustration-black-afro-american-kid-with-ball-school-gymnasium_3264819.htm)
+*   [Dungeon](https://www.freepik.com/free-vector/illustration-with-medieval-prison-cell-castle-dungeon-room-prisoners_3586246.htm)
+*   [Princess](https://www.freepik.com/free-vector/princess-with-castle-flat-design_896777.htm)
+*   [Unicorn](https://www.rawpixel.com/image/515603/unicorn-taking-bath-vector)
 
 
 

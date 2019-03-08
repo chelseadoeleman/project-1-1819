@@ -18,7 +18,6 @@ export async function getData() {
         const dynamicQuery = `${queryUrl ? '&' : ''}${queryUrl || ''}`
         const amount = '{50}'
         const url = `${urlBase}/${baseQuery}${bookQuery}${dynamicQuery}${amount}`
-        console.log(url)
         const stream = await api.createStream(url)
 
         const data = await stream

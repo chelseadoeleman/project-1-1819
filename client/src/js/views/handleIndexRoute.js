@@ -18,32 +18,25 @@ export const handleIndexRoute = (main) => {
         const data = await getData()
         const results = data.flat()
 
-        if (results) {
-            results
-            .filter(result => {
-                return result.image && result.image.includes('https://v19.')
-            })
-            .forEach(result => {
-                const { image } = result
-                const article = document.createElement('article')
-                const img = document.createElement('img')
-                
-                sectionElement.classList.add('book-wrapper')
-                headingElement.innerText = 'Bekijk onze boeken'
-
-                if (image === undefined) {
-                    return
-                } else {
-                    img.setAttribute('src', image)
-                    article.appendChild(img)
-                    sectionElement.appendChild(article)
-                }
-            })
-
-        } else {
-            console.log('no results')
-        }
-        
+        results
+        .filter(result => {
+            return result.image && result.image.includes('https://v19.')
+        })
+        .forEach(result => {
+            const { image } = result
+            const article = document.createElement('article')
+            const img = document.createElement('img')
+            
+            sectionElement.classList.add('book-wrapper')
+            headingElement.innerText = 'Bekijk onze boeken'
+            if (image === undefined) {
+                return
+            } else {
+                img.setAttribute('src', image)
+                article.appendChild(img)
+                sectionElement.appendChild(article)
+            }
+        })        
 
         main.appendChild(headingElement)
         main.appendChild(sectionElement)
