@@ -66,7 +66,6 @@ const getDetailPageFromResult = (result) => {
 
 export const getTransformedResultFromResults = (results) => {
     console.log(results)
-    return results
         ? results.map(result => ({
             author: getAuthorFromResult(result),
             image: getImageFromResult(result),
