@@ -19,7 +19,7 @@
 
 ## How to install
 
-Before installing make sure you have installed the latest version of node.js.
+Before installing make sure you have installed the latest version of npm.
 Choose or make a new directory.
 Load the template into your directory.
 
